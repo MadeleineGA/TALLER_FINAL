@@ -1,0 +1,11 @@
+artifact_location: file:C:/Users/madeleine.gil/OneDrive - COMISION DE REGULACIÓN DE
+  COMUNICACIONES/MADELEINE_GIL/MAESTRIA_EAN/MLOPs/TALLER_FINAL/mlruns/901436617948584230/models/m-ba197e06b05641939e4d5a836ee448e7/artifacts
+creation_timestamp: 1777576596304
+experiment_id: '901436617948584230'
+last_updated_timestamp: 1777576614660
+model_id: m-ba197e06b05641939e4d5a836ee448e7
+model_type: null
+name: model
+source_run_id: 95f3c6e7795b49aa9cb91de50b7c2ee6
+status: 2
+status_message: null

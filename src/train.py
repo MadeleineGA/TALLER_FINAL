@@ -50,8 +50,15 @@ df["trimestre"] = pd.to_numeric(df["trimestre"], errors="coerce")
 df["mes_del_trimestre"] = pd.to_numeric(df["mes_del_trimestre"], errors="coerce")
 
 # eliminar los reportes de tráfico en cero
-if config["data"]["dropna"]:
-    df = df.dropna(subset=[config["data"]["target"]])
+target = config["data"]["target"]
+
+df[target] = pd.to_numeric(df[target], errors="coerce")
+
+if config["data"]["dropna_target"]:
+    df = df.dropna(subset=[target])
+
+if config["data"]["dropna_all"]:
+    df = df.dropna()
 
 # Quitar registros con tráfico negativo si existieran - en caso de que se registre alguno a futuro por error
 df = df[df["trafico"] >= 0]
@@ -59,8 +66,8 @@ df = df[df["trafico"] >= 0]
 # -----------------------------
 # Variables predictoras y objetivo
 # -----------------------------
-X = df.drop(columns=["trafico"])
-y = df["trafico"]
+X = df.drop(columns=[target])
+y = df[target]
 
 categorical_features = ["id_empresa", "empresa"]
 numeric_features = ["anno", "trimestre", "mes_del_trimestre"]

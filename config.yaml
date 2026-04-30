@@ -1,5 +1,5 @@
 data:
-  api_url: "https://www.postdata.gov.co/api/action/datastore/search.json?resource_id=38762b33-281a-4919-8c7d-0cdc2659af13&limit=1100"
+  api_url: "https://www.postdata.gov.co/api/action/datastore/search.json?resource_id=d40c5e75-db56-4ec1-a441-0314c47bd71d&limit=1100"
   target: "trafico"
   dropna_target: true
   dropna_all: false
