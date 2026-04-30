@@ -1,0 +1,33 @@
+name: CD - Promoción y Despliegue
+
+on:
+  workflow_run:
+    workflows: ["CI - Entrenamiento y Validación"]
+    types:
+      - completed
+  workflow_dispatch:
+
+jobs:
+  deploy-model:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clonar repositorio
+        uses: actions/checkout@v3
+
+      - name: Configurar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Instalar dependencias
+        run: make install
+
+      - name: Descargar artefactos MLflow
+        uses: actions/download-artifact@v4
+        with:
+          name: mlruns
+          path: mlruns
+
+      - name: Promoción simulada del modelo
+        run: make cd
