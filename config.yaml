@@ -1,0 +1,14 @@
+data:
+  api_url: "https://www.postdata.gov.co/api/action/datastore/search.json?resource_id=38762b33-281a-4919-8c7d-0cdc2659af13&limit=1100"
+  target: "trafico"
+  dropna_target: true
+  dropna_all:false  
+
+model:
+  test_size: 0.2
+  random_state: 42
+  n_estimators: 100
+
+mlflow:
+  tracking_uri: "file:./mlruns"
+  experiment_name: "trafico-internet-movil"
