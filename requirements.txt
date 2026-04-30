@@ -1,0 +1,12 @@
+seaborn
+matplotlib
+pandas
+requests
+scikit-learn
+mlflow
+fastapi
+uvicorn
+mlflow
+numpy
+pydantic
+python-multipart
