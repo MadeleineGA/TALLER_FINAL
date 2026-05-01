@@ -1,6 +1,7 @@
 Taller final MLOPs
-Universidad EAN
-Maestría en Ciencia de Datos
+
+Universidad EAN – Maestría en Ciencia de Datos
+
 Estudiante: Madeleine Gil
 
 Este proyecto desarrolla un pipeline de machine learning para predecir el tráfico de internet móvil en Colombia a partir de datos abiertos obtenidos desde una API pública.
