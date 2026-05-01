@@ -66,3 +66,20 @@ Se utiliza MLflow para:
 - Guardar métricas
 - Almacenar el modelo entrenado
 - Registrar firma del modelo
+
+CI/CD con GitHub Actions
+
+Se implementaron workflows para automatizar el pipeline:
+
+- CI (Continuous Integration)
+Instalación de dependencias
+Entrenamiento del modelo
+Validación
+Generación de artefactos (mlruns)
+
+- CD (Continuous Deployment)
+Simulación de despliegue del modelo
+
+El modelo entrenado se almacena como artefacto en: mlruns/ y se guarda en GitHub Actions como output del workflow.
+
+Resultados: El modelo permite estimar el tráfico de internet móvil a partir de variables temporales y de proveedor, loq ue proporciona una base para análisis de comportamiento para la toma de decisiones.
