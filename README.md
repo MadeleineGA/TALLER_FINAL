@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 Taller final MLOPs
-=======
->>>>>>> 61cbe9db87880f51bcf3603feda856a6ca371b3e
 
 Universidad EAN – Maestría en Ciencia de Datos
 
